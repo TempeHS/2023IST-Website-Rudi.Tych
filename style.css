@@ -84,24 +84,50 @@ DIV {
 }
 
 .button-1 {
-  color: #FFCE00;
-  border: 3px solid #FFCE00;
+  color: #0000FF;
+  border: 3px solid #0000FF;
 }
 
 .button-1:hover {
-  color: #FFF;
-  background-color: #FFCE00;
+  color: #06bcc1;
+  background-color: #0000FF;
 }
 
-.button-2 {
-  color: #FE4880;
-  border: 3px solid #FE4880;
-  background-image: linear-gradient(to right, transparent 50%, #FE4880 50%);
-  background-size: 200%;
-  background-position: 0%;
+.button-5 {
+	color: #0000FF;
+  position: relative;
 }
 
-.button-2:hover {
-  color: #FFF;
-  background-position: 100%;
+.button-5:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid #0000FF;
+  border-right: 3px solid #0000FF;
+  transition: all 0.4s, opacity 0.1s 0.4s;
+  opacity: 0;
 }
+
+.button-5:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  border-top: 3px solid #00FFFF;
+  border-left: 3px solid #00FFFF;
+  transition: all 0.4s, opacity 0.1s 0.4s;
+  opacity: 0;
+}
+
+.button-5:hover:after, .button-5:hover:before {
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  transition: all 0.4s, opacity 0.1s;
+  opacity: 1;
+}
+
